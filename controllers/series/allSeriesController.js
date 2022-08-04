@@ -13,7 +13,6 @@ router.get('/series', async (req, res) => {
                 page: 1
             }
          })
-
        
 
          //console.log(data)
