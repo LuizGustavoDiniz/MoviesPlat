@@ -1,0 +1,39 @@
+
+<%- include ('./partials/header') %> 
+
+    <main>
+        <section class="container" id="container">
+
+            <% if (now) { %>
+                <h1 class="heading">Filmes no Cinema :</h1>
+                <hr>
+            <% } else { %>
+                <h1 class="heading">Filmes :</h1>
+                <hr>
+                <% } %> 
+
+            
+
+            
+            <div class="row movies-container">
+                <% movies.forEach(movie => { %>
+                    <div class="col">
+                        <div class="card">
+                          <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %> " class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><%= movie.title %> </h5>
+                            <p class="card-text"><i class="fab fa-imdb text-light"></i> <%= movie.vote_average %>/10</p>
+                            <a href="/movie/details/<%= movie.id %> " class="btn btn-primary">ver detalhes</a>  
+                          </div>
+                        </div>
+                      </div>
+                <% }) %>
+                
+              </div>
+
+        </section>
+    </main>
+
+    <!--<a target="_blank" href="https://icons8.com/icon/43640/monitor">Monitor</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
+
+    <%- include ('./partials/footer') %>

@@ -1,0 +1,33 @@
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    const menuBtn = document.querySelector('#menu-btn')
+    const navBar = document.querySelector('.navbar')
+    const searchButton = document.querySelector('#search')
+    const searchForm = document.querySelector('.form-search')
+
+    searchButton.addEventListener('click', () => {
+       searchForm.classList.toggle('show')
+       navBar.classList.remove('active')
+       menuBtn.classList.remove('fa-times')
+    })
+
+    menuBtn.addEventListener('click', () => {
+        navBar.classList.toggle('active')
+        menuBtn.classList.toggle('fa-times')
+        searchForm.classList.remove('show')
+     })
+
+     window.onscroll = () => {
+        navBar.classList.remove('active')
+        menuBtn.classList.remove('fa-times')
+        searchForm.classList.remove('show')
+     }
+</script>
+</html>
+
+
+.header .fa-times{
+    transform: translateX(27rem);
+    padding-top: 1rem;
+}

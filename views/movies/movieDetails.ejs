@@ -1,0 +1,91 @@
+<%- include ('../partials/detailsHeader') %> 
+
+
+<main>
+
+    <section class="container details-container">
+
+        <div class="movie-poster">
+           <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %> " alt="">
+        </div>
+
+        <div class="details-content">
+          <h1 class="heading2"><%= movie.title %></h1>
+          
+        
+        <div class="overview">
+            <p>
+                <%= movie.overview %> 
+            </p>
+        </div>
+
+        
+
+        <div class="icons">
+
+            <a href="#" class="icon" ><i class="far fa-bookmark"></i></a>
+            <a href="#" class="icon"><i class="fas fa-list-ol"></i></a>
+            <a href="#" class="icon"><i class="fas fa-play"></i></a>
+            <a href="#" class="trailer">assista ao trailer</a>
+
+        </div>
+
+        <div class="movie-info">
+            <p>
+                <%= movie.release_date %> 
+                <% movie.genres.forEach(genre => { %>
+                  <%= genre.name %>, 
+                <% }) %>
+                2h 27m
+              </p>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="container comments" id="comments">
+
+        <div class="comments-title pt-5">
+            <h1 class="heading">comentários e análises</h1>
+        </div>
+
+        <div class="card mt-5">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card mb-5">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card mb-5">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </section>
+
+</main>
+
+
+
+
+<%- include ('../partials/footer') %>
