@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = 3000
 const allMovieController = require('./controllers/movies/allMoviesController')
 const allSeriesController = require('./controllers/series/allSeriesController')
 
@@ -17,5 +17,5 @@ app.use('/', allSeriesController)
 
 
 app.listen(port, () => {
-    console.log('Server running on port ' + port)
+    console.log('Server running on port ' + PORT)
 })
