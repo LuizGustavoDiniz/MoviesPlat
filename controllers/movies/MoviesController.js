@@ -1,9 +1,9 @@
 const api = require('../../services/api')
-const express = require('express')
-const router = express.Router()
 
-router.get('/', async (req, res) => {
+module.exports = class MoviesController{
 
+   static async showMovies(req, res){
+    
     let now_playing = false
 
     try{
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
             }
          })
 
-         res.render('index',{
+         res.render('home',{
             movies: data.results,
             now: now_playing
          })
@@ -25,9 +25,9 @@ router.get('/', async (req, res) => {
     }catch(error){
         res.json(error)
     }
-})
+   }
 
-router.get('/movies/genre/:id', async (req, res) => {
+   static async moviesGenres(req, res){
     const { id } = req.params
     const { genero } = req.query 
 
@@ -50,13 +50,9 @@ router.get('/movies/genre/:id', async (req, res) => {
     } catch (error) {
         res.json(error)
     }
+   }
 
-    
-     
-})
-
-router.get('/movies/now_playing', async (req, res) => {
-
+   static async nowPlayingMovies(req, res){
     let now_playing = true
 
     try{
@@ -78,11 +74,10 @@ router.get('/movies/now_playing', async (req, res) => {
     }catch(error){
         res.json(error)
     }
+   }
 
-})
-
-
-router.get('/movie/details/:id', async (req, res) => {
+   static async movieDetails(req, res){
+    
     const { id } = req.params
 
     try {
@@ -104,8 +99,8 @@ router.get('/movie/details/:id', async (req, res) => {
         res.json(error)
     }
 
-    
-     
-})
-module.exports = router
+   }
+
+}
+
 
