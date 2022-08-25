@@ -8,10 +8,8 @@
 }
 
 html{
-    overflow-x: hidden;
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 9rem;
 }
 
 body{
@@ -20,6 +18,13 @@ body{
 
 a{
     text-decoration: none;
+}
+
+.btn{
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    background-color: #fc5203;
+    border: none;
 }
 
 .heading{
@@ -329,7 +334,63 @@ a{
 
 
 
+/*LOGIN E REGISTRO SEÇÃO*/
 
+.bg{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.content{
+    background-image: url(../images//darksouls.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container{
+    font-size: 1.6rem;
+    min-height: 60rem;
+    max-width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-left: 10rem;
+    color: #fff;
+    z-index: 10000;
+}
+
+.login-container h2{
+    padding: 1rem 0.6rem;
+    border-left: 4px solid #fc5203;
+    font-size: 2.6rem;
+}
+
+.login-container form{
+    width: 100%;
+    padding: 1.6rem 1rem;
+}
+
+.login-container form .login-control{
+    display: flex;
+    flex-flow: column;
+}
+
+.login-container form .login-control label{
+    font-weight: bold;
+}
+
+.login-container form .login-control input{
+    border: none;
+    padding: 0.8rem;
+}
 
 
 

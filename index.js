@@ -6,12 +6,13 @@ const fileStore = require('session-file-store')(session)
 const port = 3000
 const moviesRoutes = require('./routes/moviesRoutes')
 const seriesRoutes = require('./routes/seriesRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 const userModel = require('./models/User')
 const connection = require('./Database/database')
 
 
-app.use(express.static('public'))
+
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
@@ -35,6 +36,7 @@ app.use(session({
 
 app.use(flash())
 
+app.use(express.static('public'))
 
 app.use((req, res, next) => {
     if(req.session.userid){
@@ -45,9 +47,10 @@ app.use((req, res, next) => {
 })
 
 
+app.use('/', authRoutes)
 app.use('/movies', moviesRoutes)
 app.get('/', (req, res) => {
-    res.redirect('/movies')
+    res.redirect('/login')
 })
 app.use('/series', seriesRoutes)
 
