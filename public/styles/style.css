@@ -25,6 +25,7 @@ a{
     font-size: 1.6rem;
     background-color: #fc5203;
     border: none;
+    color: #fff;
 }
 
 .heading{
@@ -336,6 +337,8 @@ a{
 
 /*LOGIN E REGISTRO SEÇÃO*/
 
+/*Login*/
+
 .bg{
     background-color: rgba(0, 0, 0, 0.6);
     width: 100vw;
@@ -373,23 +376,58 @@ a{
     font-size: 2.6rem;
 }
 
-.login-container form{
+.login-container a{
+   font-weight: 500;
+   color: #fc5203;
+}
+
+/*registro*/
+
+.register-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container{
+    color: #fff;
     width: 100%;
+    max-width: 30%;
+    font-size: 1.6rem;
     padding: 1.6rem 1rem;
 }
 
-.login-container form .login-control{
+.register-container h2{
+    padding: 1rem 0.6rem;
+    border-left: 4px solid #fc5203;
+    font-size: 2.6rem;
+}
+
+.register-container a{
+    font-weight: 500;
+    color: #fc5203;
+}
+
+
+.form-pattern{
+    width: 100%;
+}
+
+.form-pattern-control{
     display: flex;
     flex-flow: column;
 }
 
-.login-container form .login-control label{
+.form-pattern-control label{
     font-weight: bold;
 }
 
-.login-container form .login-control input{
+.form-pattern-control input{
     border: none;
     padding: 0.8rem;
+    margin-bottom: 1.6rem;
 }
 
 

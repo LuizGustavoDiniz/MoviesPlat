@@ -65,7 +65,7 @@ module.exports = class MoviesController{
             }
          })
 
-         res.render('index',{
+         res.render('home',{
             movies: data.results,
             now: now_playing
          })

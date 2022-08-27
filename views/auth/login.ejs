@@ -16,22 +16,29 @@
 
         </div>
                 <div class="login-container">
+
+                    <% if (messages) { %>
+                        <div class="flash-container">
+                            <p><%= messages.msg %> </p>
+                        </div>
+                        
+                   <% } %>
                     
                     <h2>Login</h2>
-                    <form action="">
-                       <div class="login-control">
+                    <form action="/signIn" method="post" class="form-pattern">
+                       <div class="form-pattern-control">
                         <label for="">e-mail</label>
-                        <input type="email" name="email" placeholder="olaawdawd">
+                        <input type="email" name="email" placeholder="Insira seu email">
                        </div>
             
-                       <div class="login-control">
+                       <div class="form-pattern-control">
                         <label for="">senha</label>
-                        <input type="password" name="password" placeholder="olaawdawd">
+                        <input type="password" name="password" placeholder="Insira sua senha">
                        </div>
             
                        <input type="submit" value="Entrar" class="btn">
                     </form>
-                    <p>não possui uma conta? <a href="#">clique aqui!</a></p>
+                    <p>não possui uma conta? <a href="/register">clique aqui!</a></p>
                 </div> 
     </section>
 

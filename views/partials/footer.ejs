@@ -4,24 +4,15 @@
     const menuBtn = document.querySelector('#menu-btn')
     const navBar = document.querySelector('.navbar')
     const searchButton = document.querySelector('#search')
-    const searchForm = document.querySelector('.form-search')
-
-    searchButton.addEventListener('click', () => {
-       searchForm.classList.toggle('show')
-       navBar.classList.remove('active')
-       menuBtn.classList.remove('fa-times')
-    })
 
     menuBtn.addEventListener('click', () => {
         navBar.classList.toggle('active')
         menuBtn.classList.toggle('fa-times')
-        searchForm.classList.remove('show')
      })
 
      window.onscroll = () => {
         navBar.classList.remove('active')
         menuBtn.classList.remove('fa-times')
-        searchForm.classList.remove('show')
      }
 </script>
 </html>

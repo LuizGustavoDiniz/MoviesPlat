@@ -13,7 +13,12 @@
                 <% } %> 
 
             
-
+                <% if (messages) { %>
+                  <div class="flash-container">
+                      <p><%= messages.msg %> </p>
+                  </div>
+                  
+             <% } %>
             
             <div class="row movies-container">
                 <% movies.forEach(movie => { %>
@@ -23,7 +28,7 @@
                           <div class="card-body">
                             <h5 class="card-title"><%= movie.title %> </h5>
                             <p class="card-text"><i class="fab fa-imdb text-light"></i> <%= movie.vote_average %>/10</p>
-                            <a href="/movie/details/<%= movie.id %> " class="btn btn-primary">ver detalhes</a>  
+                            <a href="/movies/details/<%= movie.id %> " class="btn btn-primary">ver detalhes</a>  
                           </div>
                         </div>
                       </div>

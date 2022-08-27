@@ -1,5 +1,7 @@
 const express = require('express')
-const app = express()
+const path = require('path')
+const os = require('os')
+
 const session = require('express-session')
 const flash = require('express-flash')
 const fileStore = require('session-file-store')(session)
@@ -9,6 +11,7 @@ const seriesRoutes = require('./routes/seriesRoutes')
 const authRoutes = require('./routes/authRoutes')
 
 const userModel = require('./models/User')
+const app = express()
 const connection = require('./Database/database')
 
 
@@ -19,12 +22,12 @@ app.use(express.json())
 
 app.use(session({
     name: "session",
-    secret: "my_secret",
+    secret: "nosso_secret",
     resave: false,
     saveUninitialized: false,
     store: new fileStore({
         logFn: function(){},
-        path: require('path').join(require('os').tmpdir(), "sessions")
+        path: path.join(os.tmpdir(), "sessions")
     }),
     cookie: {
         secure: false,
@@ -39,6 +42,7 @@ app.use(flash())
 app.use(express.static('public'))
 
 app.use((req, res, next) => {
+    
     if(req.session.userid){
         res.locals.session = req.session
     }
@@ -47,12 +51,16 @@ app.use((req, res, next) => {
 })
 
 
-app.use('/', authRoutes)
+
 app.use('/movies', moviesRoutes)
+app.use('/series', seriesRoutes)
+app.use('/', authRoutes)
+
+
 app.get('/', (req, res) => {
     res.redirect('/login')
 })
-app.use('/series', seriesRoutes)
+
 
 
 
