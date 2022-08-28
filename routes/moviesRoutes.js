@@ -11,5 +11,7 @@ router.get('/now_playing', authentication, MoviesController.nowPlayingMovies)
 
 router.get('/details/:id', authentication, MoviesController.movieDetails)
 
+router.get('/comment', authentication, MoviesController.comment)
+
 
 module.exports = router

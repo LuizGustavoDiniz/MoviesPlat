@@ -101,6 +101,10 @@ module.exports = class MoviesController{
 
    }
 
+   static async comment(req, res){
+    res.render('movies/comment')
+   }
+
 }
 
 
