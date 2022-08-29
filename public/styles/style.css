@@ -20,12 +20,22 @@ a{
     text-decoration: none;
 }
 
-.btn{
+/*.container .movies-container .card .card-body .btn{
     margin: 0.5rem 0;
     font-size: 1.6rem;
     background-color: #fc5203;
     border: none;
+}*/
+
+.btn{
+    margin: 0.5rem 0 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1rem 1rem;
+    background-color: #fc5203;
+    border: none;
     color: #fff;
+    border-radius: 0.4rem;
 }
 
 .heading{
@@ -196,7 +206,8 @@ a{
     width: 100%;
     max-width: 23%;
     height: 59rem;
-    background-color: rgb(36, 36, 36);
+    background-color: steelblue;
+    /*background-color: rgb(36, 36, 36);*/
     border: none;
     margin: 1rem;
 }
@@ -211,7 +222,7 @@ a{
 }
 
 .container .movies-container .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .container .movies-container .card .card-body{
@@ -219,7 +230,8 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: rgb(36, 36, 36);
+    background-color: slateblue;
+    /*background-color: rgb(36, 36, 36);*/
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 2rem;
@@ -233,22 +245,32 @@ a{
     text-transform: uppercase;
 }
 
+.container .movies-container .card .card-body .card-content{
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
 .container .movies-container .card .card-body .card-text{
     margin: 0.5rem 0;
     font-size: 1.3rem;
     color: rgb(190, 190, 190);
 }
 
-.container .movies-container .card .card-body .card-text .fa-imdb{
-    font-size: 3rem;
+
+.container .movies-container .card .card-body span{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: #fff;
 }
 
-.container .movies-container .card .card-body .btn{
-    margin: 0.5rem 0;
-    font-size: 1.6rem;
-    background-color: #fc5203;
-    border: none;
+.container .movies-container .card .card-body .card-text .fa-imdb{
+    font-size: 3rem;
+    color: steelblue;
 }
+
+
 
 /*home end*/
 
@@ -472,6 +494,74 @@ footer{
 }
 
 
+@media (max-width:1370px){
+
+    .container .movies-container .card{
+        /*
+        border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    max-width: 23%;
+    height: 59rem;
+    background-color: steelblue;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    margin: 1rem;
+        */
+
+        width: 100%;
+        max-width: 30%;
+    
+    }
+
+    .container .movies-container .card img{
+        /*border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        max-width: 100%;
+        height: 43rem;
+        object-fit: cover;*/
+
+    }
+
+}
+
+
+@media (max-width:1200px){
+
+    .container .movies-container .card{
+        /*
+        border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    max-width: 23%;
+    height: 59rem;
+    background-color: steelblue;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    margin: 1rem;
+        */
+
+        width: 100%;
+        max-width: 30%;
+        height: 40rem;
+    
+    }
+
+    .container .movies-container .card img{
+        /*border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        width: 100%;
+        max-width: 100%;
+        height: 43rem;
+        object-fit: cover;*/
+
+        max-width: 80%;
+        height: 100%;
+
+    }
+
+}
 
 
 

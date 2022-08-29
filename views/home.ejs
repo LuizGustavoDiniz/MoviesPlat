@@ -27,7 +27,10 @@
                           <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %> " class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title"><%= movie.title %> </h5>
-                            <p class="card-text"><i class="fab fa-imdb text-light"></i> <%= movie.vote_average %>/10</p>
+                            <div class="card-content">
+                                    <div class="card-text"><i class="fab fa-imdb text-light"></i></div>
+                                <span><%= movie.vote_average %>/10</span>
+                            </div>
                             <a href="/movies/details/<%= movie.id %> " class="btn btn-primary">ver detalhes</a>  
                           </div>
                       </div>
