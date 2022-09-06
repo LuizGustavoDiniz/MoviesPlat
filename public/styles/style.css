@@ -5,6 +5,7 @@
     transition: all 0.2s linear;
     text-transform: capitalize;
     list-style: none;
+    font-family: 'Inter', sans-serif;
 }
 
 html{
@@ -28,7 +29,6 @@ a{
 }*/
 
 .btn{
-    margin: 0.5rem 0 0;
     font-size: 1.6rem;
     font-weight: 700;
     padding: 1rem 1rem;
@@ -45,7 +45,6 @@ a{
     font-weight: 700;
     color: #fc5203;
     border-bottom: 2px solid #fff;
-    background-color: blue;
 }
 
 .heading2{
@@ -67,7 +66,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 7%;
+    padding: 0 11%;
     border-bottom: var(--border);
     position: fixed;
     top: 0; right: 0; left: 0;
@@ -182,17 +181,15 @@ a{
 /*home*/
 
 .container{
-    margin-top: 8rem;
-    width: 100%;
+    max-width: 1246px;
     min-height: 100%;
-    background-color: #fc5203;
+    margin: 8rem auto 0px;
     display: flex;
     flex-direction: column;
 }
 
 .container .movies-container{
-    background-color: red;
-    max-width: 90%;
+    max-width: 100%;
     margin: 2rem auto 0;
     display: flex;
     flex-wrap: wrap;
@@ -201,15 +198,17 @@ a{
 }
 
 .container .movies-container .card{
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-radius: 1rem;
     width: 100%;
-    max-width: 23%;
-    height: 59rem;
-    background-color: steelblue;
-    /*background-color: rgb(36, 36, 36);*/
+    max-width: 22%;
+    height: 44rem;
+    background-color: rgb(27, 27, 27);
     border: none;
-    margin: 1rem;
+    margin: 1.3rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .container .movies-container .card img{
@@ -217,55 +216,70 @@ a{
     border-top-right-radius: 1rem;
     width: 100%;
     max-width: 100%;
-    height: 43rem;
-    object-fit: cover;
+    height: 70%;
+    object-fit: fill;
 }
 
 .container .movies-container .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-.container .movies-container .card .card-body{
+/*.container .movies-container .card .card-body{
     max-height: 16rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: slateblue;
-    /*background-color: rgb(36, 36, 36);*/
+    background-color: rgb(36, 36, 36);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 2rem;
-}
+}*/
 
-.container .movies-container .card .card-body .card-title{
-    height: 4.1rem;
+/*.container .movies-container .card .card-body{
+    width: 100%;
+    max-width: 100%;
+    height: 29.6%;
+    background-color: rgba(165, 42, 42, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+*/
+
+.container .movies-container .card .card-title{
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+    height: 3.1rem;
     color: #fff;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
 }
 
-.container .movies-container .card .card-body .card-content{
-    margin-top: 0.5rem;
+.container .movies-container .card .card-content{
     display: flex;
     align-items: center;
+    margin: 1.6rem 0;
 }
 
-.container .movies-container .card .card-body .card-text{
-    margin: 0.5rem 0;
+.container .movies-container .card .card-text{
     font-size: 1.3rem;
     color: rgb(190, 190, 190);
 }
 
 
-.container .movies-container .card .card-body span{
-    font-size: 1.7rem;
+.container .movies-container .card span{
+    font-size: 1.5rem;
     font-weight: bold;
     padding-left: 0.5rem;
     color: #fff;
 }
 
-.container .movies-container .card .card-body .card-text .fa-imdb{
+.container .movies-container .card .card-text .fa-imdb{
     font-size: 3rem;
     color: steelblue;
 }
@@ -510,7 +524,7 @@ footer{
         */
 
         width: 100%;
-        max-width: 30%;
+        max-width: 25%;
     
     }
 
@@ -522,6 +536,26 @@ footer{
         height: 43rem;
         object-fit: cover;*/
 
+        height: 80%;
+    }
+
+    .container .movies-container .card{
+        position: relative;
+    }
+
+    .container .movies-container .card .card-content{
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        position:  absolute;
+        top: -3.6%;
+        right: 0;
+        background-color: #fc5203af;
+        padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    }
+
+    .container .movies-container .card .card-text .fa-imdb{
+        font-size: 3rem;
+        color: #fff;
     }
 
 }
@@ -541,10 +575,46 @@ footer{
     border: none;
     margin: 1rem;
         */
+    
+    }
 
+    
+
+    .container .movies-container .card img{
+        /*border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
         width: 100%;
-        max-width: 30%;
-        height: 40rem;
+        max-width: 100%;
+        height: 43rem;
+        object-fit: cover;*/
+
+
+    }
+
+    .container .movies-container .card .card-content{
+
+    }
+
+}
+
+@media (max-width:1100px){
+
+    .container .movies-container .card{
+        /*
+        border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    max-width: 23%;
+    height: 59rem;
+    background-color: steelblue;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    margin: 1rem;
+        */
+
+        max-width: 40%;
+        height: 60rem;
+        justify-content: space-between;
     
     }
 
@@ -555,14 +625,60 @@ footer{
         max-width: 100%;
         height: 43rem;
         object-fit: cover;*/
-
-        max-width: 80%;
-        height: 100%;
-
     }
+
+    .container .movies-container .card .card-title{
+        text-align: center;
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+        height: 3.1rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .container .movies-container .card .card-content{
+        top: -2.8%;
+        right: 0;
+    }
+
 
 }
 
+@media (max-width:700px){
+ 
+    .container .movies-container .card{
+        /*
+        border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    max-width: 23%;
+    height: 59rem;
+    background-color: steelblue;
+    background-color: rgb(36, 36, 36);
+    border: none;
+    margin: 1rem;
+        */
+
+        max-width: 80%;
+        height: 60rem;
+        justify-content: space-between;
+    
+    }
+
+    .container .movies-container .card .card-title{
+        text-align: center;
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+        height: 3.1rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+}
 
 
 @media (max-width:800px){
@@ -626,7 +742,7 @@ footer{
         height: 100%;
     }
 
-    .container .row .col .card .card-body{
+    .container .row .col .card{
         padding: 2rem 0;
     }
 

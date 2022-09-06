@@ -22,17 +22,14 @@
             
             <div class="row movies-container">
                 <% movies.forEach(movie => { %>
-        
                         <div class="card">
-                          <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %> " class="card-img-top" alt="...">
-                          <div class="card-body">
+                            <img src="https://image.tmdb.org/t/p/original/<%= movie.poster_path %> " class="card-img-top" alt="...">
                             <h5 class="card-title"><%= movie.title %> </h5>
                             <div class="card-content">
                                     <div class="card-text"><i class="fab fa-imdb text-light"></i></div>
                                 <span><%= movie.vote_average %>/10</span>
                             </div>
-                            <a href="/movies/details/<%= movie.id %> " class="btn btn-primary">ver detalhes</a>  
-                          </div>
+                            <a href="/movies/details/<%= movie.id %> " class="btn">ver detalhes</a> 
                       </div>
                 <% }) %>
                 
