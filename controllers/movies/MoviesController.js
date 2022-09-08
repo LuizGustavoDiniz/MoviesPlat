@@ -3,6 +3,18 @@ const api = require('../../services/api')
 module.exports = class MoviesController{
 
    static async showMovies(req, res){
+
+    let page = 1
+
+    let next = req.query.next
+
+    if(!next){
+        page = 1
+    }
+    else{
+        page += next
+    }
+  
     
     let now_playing = false
 
@@ -12,7 +24,7 @@ module.exports = class MoviesController{
             params: {
                 api_key: '52c666c7bba4767d261680869bdc65e5',
                 language: 'pt-BR',
-                page: 1
+                page: page
             }
          })
 

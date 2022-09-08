@@ -35,6 +35,17 @@
                 
               </div>
 
+              <div class="pagination-container">
+                  <form action="/movies" method="get">
+                    <input type="hidden" name="next" value="1">
+                    <button type="submit">next</button>
+                  </form>
+                  <form action="/movies" method="get">
+                    <input type="hidden" name="prev" value="1">
+                    <button type="submit">prev</button>
+                  </form>
+              </div>
+
         </section>
     </main>
 
