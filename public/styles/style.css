@@ -36,6 +36,7 @@ a{
     border: none;
     color: #fff;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 
 .heading{
@@ -284,6 +285,13 @@ a{
     color: steelblue;
 }
 
+/*Pagination container*/
+.pagination-container{
+    background-color: blue;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 /*home end*/

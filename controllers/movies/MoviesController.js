@@ -6,15 +6,22 @@ module.exports = class MoviesController{
 
     let page = 1
 
-    let next = req.query.next
+    let next = Number(req.query.next)
 
-    if(!next){
-        page = 1
+    let prev = Number(req.query.prev)
+
+    if(!req.query.next && !req.query.prev){
+        page = 1;
     }
-    else{
-        page += next
+
+    if(req.query.next){
+        page = next
     }
-  
+
+    if(req.query.prev === true && prev >= 1){
+        page = next - 1
+    }
+
     
     let now_playing = false
 
@@ -30,7 +37,8 @@ module.exports = class MoviesController{
 
          res.render('home',{
             movies: data.results,
-            now: now_playing
+            now: now_playing,
+            page: data.page
          })
 
 
